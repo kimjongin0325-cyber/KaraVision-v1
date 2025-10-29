@@ -55,7 +55,7 @@ if __name__ == "__main__":
     AREA2 = (600, 4000)  # 回退阶段面积范围
     # =======================
 
-    cleaner = KarakaraMarkCleaner(video_path, video_path)
+    cleaner = karaoMarkCleaner(video_path, video_path)
 
     # 预取一帧确定尺寸/FPS
     first_frame = None

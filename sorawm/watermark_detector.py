@@ -11,7 +11,7 @@ from karawm.utils.video_utils import VideoLoader
 # based on the kara tempalte to detect the whole, and then got the icon part area.
 
 
-class KarakaraMarkDetector:
+class karaoMarkDetector:
     def __init__(self):
         download_detector_weights()
         logger.debug(f"Begin to load yolo kara mark detet model.")
@@ -66,7 +66,7 @@ if __name__ == "__main__":
     # =======================
 
     # 初始化检测器
-    detector = KarakaraMarkDetector()
+    detector = karaoMarkDetector()
 
     # 初始化视频加载器
     video_loader = VideoLoader(video_path)

@@ -8,12 +8,12 @@ from tqdm import tqdm
 
 from karawm.utils.video_utils import VideoLoader
 from karawm.karamark_cleaner import karaMarkCleaner
-from karawm.karamark_detector import KarakaraMarkDetector
+from karawm.karamark_detector import karaoMarkDetector
 
 
 class Karawm:
     def __init__(self):
-        self.detector = KarakaraMarkDetector()
+        self.detector = karaoMarkDetector()
         self.cleaner = karaMarkCleaner()
 
     def run(

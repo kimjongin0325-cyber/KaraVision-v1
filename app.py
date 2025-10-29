@@ -95,7 +95,7 @@ def main():
         """
         <div style='text-align: center'>
             <p>Built with ❤️ using Streamlit and AI</p>
-            <p><a href='https://github.com/linkedlist771/KarakaramarkCleaner'>GitHub Repository</a></p>
+            <p><a href='https://github.com/linkedlist771/karaomarkCleaner'>GitHub Repository</a></p>
         </div>
         """,
         unsafe_allow_html=True,
