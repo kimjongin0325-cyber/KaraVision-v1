@@ -5,7 +5,7 @@ import numpy as np
 import torch
 from loguru import logger
 
-from karawm.configs import DEFAULT_WATERMARK_REMOVE_MODEL
+from karawm.configs import DEFAULT_karaMARK_REMOVE_MODEL
 from karawm.iopaint.const import DEFAULT_MODEL_DIR
 from karawm.iopaint.download import cli_download_model, scan_models
 from karawm.iopaint.model_manager import ModelManager
@@ -14,9 +14,9 @@ from karawm.iopaint.schema import InpaintRequest
 # This codebase is from https://github.com/Sanster/IOPaint#, thanks for their amazing work!
 
 
-class WaterMarkCleaner:
+class karaMarkCleaner:
     def __init__(self):
-        self.model = DEFAULT_WATERMARK_REMOVE_MODEL
+        self.model = DEFAULT_karaMARK_REMOVE_MODEL
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
         scanned_models = scan_models()
@@ -28,9 +28,9 @@ class WaterMarkCleaner:
         self.model_manager = ModelManager(name=self.model, device=self.device)
         self.inpaint_request = InpaintRequest()
 
-    def clean(self, input_image: np.array, watermark_mask: np.array) -> np.array:
+    def clean(self, input_image: np.array, karamark_mask: np.array) -> np.array:
         inpaint_result = self.model_manager(
-            input_image, watermark_mask, self.inpaint_request
+            input_image, karamark_mask, self.inpaint_request
         )
         inpaint_result = cv2.cvtColor(inpaint_result, cv2.COLOR_BGR2RGB)
         return inpaint_result
@@ -47,7 +47,7 @@ if __name__ == "__main__":
     video_path = Path("resources/puppies.mp4")
     save_video = True
     out_path = Path("outputs/dog_vs_sam_detected.mp4")
-    window = "Kara watermark (threshold+morph+shape + tracking)"
+    window = "Kara karamark (threshold+morph+shape + tracking)"
 
     # 追踪/回退策略参数
     PREV_ROI_EXPAND = 2.2  # 上一框宽高的膨胀倍数（>1）
@@ -55,7 +55,7 @@ if __name__ == "__main__":
     AREA2 = (600, 4000)  # 回退阶段面积范围
     # =======================
 
-    cleaner = KaraWaterMarkCleaner(video_path, video_path)
+    cleaner = KarakaraMarkCleaner(video_path, video_path)
 
     # 预取一帧确定尺寸/FPS
     first_frame = None

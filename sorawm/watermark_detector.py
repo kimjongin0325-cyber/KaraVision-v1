@@ -4,19 +4,19 @@ import numpy as np
 from loguru import logger
 from ultralytics import YOLO
 
-from karawm.configs import WATER_MARK_DETECT_YOLO_WEIGHTS
+from karawm.configs import kara_MARK_DETECT_YOLO_WEIGHTS
 from karawm.utils.download_utils import download_detector_weights
 from karawm.utils.video_utils import VideoLoader
 
 # based on the kara tempalte to detect the whole, and then got the icon part area.
 
 
-class KaraWaterMarkDetector:
+class KarakaraMarkDetector:
     def __init__(self):
         download_detector_weights()
-        logger.debug(f"Begin to load yolo water mark detet model.")
-        self.model = YOLO(WATER_MARK_DETECT_YOLO_WEIGHTS)
-        logger.debug(f"Yolo water mark detet model loaded.")
+        logger.debug(f"Begin to load yolo kara mark detet model.")
+        self.model = YOLO(kara_MARK_DETECT_YOLO_WEIGHTS)
+        logger.debug(f"Yolo kara mark detet model loaded.")
 
         self.model.eval()
 
@@ -61,12 +61,12 @@ if __name__ == "__main__":
     # video_path = Path("resources/puppies.mp4") # 19700121_1645_68e0a027836c8191a50bea3717ea7485.mp4
     video_path = Path("resources/19700121_1645_68e0a027836c8191a50bea3717ea7485.mp4")
     save_video = True
-    out_path = Path("outputs/kara_watermark_yolo_detected.mp4")
-    window = "Kara Watermark YOLO Detection"
+    out_path = Path("outputs/kara_karamark_yolo_detected.mp4")
+    window = "Kara karamark YOLO Detection"
     # =======================
 
     # 初始化检测器
-    detector = KaraWaterMarkDetector()
+    detector = KarakaraMarkDetector()
 
     # 初始化视频加载器
     video_loader = VideoLoader(video_path)
@@ -108,7 +108,7 @@ if __name__ == "__main__":
 
             # 显示置信度
             conf = detection_result["confidence"]
-            label = f"Watermark: {conf:.2f}"
+            label = f"karamark: {conf:.2f}"
 
             # 文本背景
             (text_w, text_h), baseline = cv2.getTextSize(
@@ -132,7 +132,7 @@ if __name__ == "__main__":
             status = f"Frame {frame_idx} | DETECTED | Conf: {conf:.3f}"
             status_color = (0, 255, 0)
         else:
-            status = f"Frame {frame_idx} | NO WATERMARK"
+            status = f"Frame {frame_idx} | NO karaMARK"
             status_color = (0, 0, 255)
 
         # 显示帧信息

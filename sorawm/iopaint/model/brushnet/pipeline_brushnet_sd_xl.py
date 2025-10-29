@@ -25,7 +25,7 @@ from diffusers.schedulers import KarrasDiffusionSchedulers
 from diffusers.utils import (USE_PEFT_BACKEND, deprecate, logging,
                              replace_example_docstring, scale_lora_layers,
                              unscale_lora_layers)
-from diffusers.utils.import_utils import is_invisible_watermark_available
+from diffusers.utils.import_utils import is_invisible_karamark_available
 from diffusers.utils.torch_utils import (is_compiled_module, is_torch_version,
                                          randn_tensor)
 from transformers import (CLIPImageProcessor, CLIPTextModel,
@@ -34,9 +34,9 @@ from transformers import (CLIPImageProcessor, CLIPTextModel,
 
 from .brushnet import BrushNetModel
 
-if is_invisible_watermark_available():
-    from diffusers.pipelines.stable_diffusion_xl.watermark import \
-        StableDiffusionXLWatermarker
+if is_invisible_karamark_available():
+    from diffusers.pipelines.stable_diffusion_xl.karamark import \
+        StableDiffusionXLkaramarker
 
 # from .multibrushnet import MultiBrushNetModel
 
@@ -134,10 +134,10 @@ class StableDiffusionXLBrushNetPipeline(
         force_zeros_for_empty_prompt (`bool`, *optional*, defaults to `"True"`):
             Whether the negative prompt embeddings should always be set to 0. Also see the config of
             `stabilityai/stable-diffusion-xl-base-1-0`.
-        add_watermarker (`bool`, *optional*):
-            Whether to use the [invisible_watermark](https://github.com/ShieldMnt/invisible-watermark/) library to
-            watermark output images. If not defined, it defaults to `True` if the package is installed; otherwise no
-            watermarker is used.
+        add_karamarker (`bool`, *optional*):
+            Whether to use the [invisible_karamark](https://github.com/ShieldMnt/invisible-karamark/) library to
+            karamark output images. If not defined, it defaults to `True` if the package is installed; otherwise no
+            karamarker is used.
     """
 
     # leave brushnet out on purpose because it iterates with unet
@@ -165,7 +165,7 @@ class StableDiffusionXLBrushNetPipeline(
         ],  # MultiBrushNetModel],
         scheduler: KarrasDiffusionSchedulers,
         force_zeros_for_empty_prompt: bool = True,
-        add_watermarker: Optional[bool] = None,
+        add_karamarker: Optional[bool] = None,
         feature_extractor: CLIPImageProcessor = None,
         image_encoder: CLIPVisionModelWithProjection = None,
     ):
@@ -193,16 +193,16 @@ class StableDiffusionXLBrushNetPipeline(
         # self.control_image_processor = VaeImageProcessor(
         #     vae_scale_factor=self.vae_scale_factor, do_convert_rgb=True, do_normalize=False
         # )
-        add_watermarker = (
-            add_watermarker
-            if add_watermarker is not None
-            else is_invisible_watermark_available()
+        add_karamarker = (
+            add_karamarker
+            if add_karamarker is not None
+            else is_invisible_karamark_available()
         )
 
-        if add_watermarker:
-            self.watermark = StableDiffusionXLWatermarker()
+        if add_karamarker:
+            self.karamark = StableDiffusionXLkaramarker()
         else:
-            self.watermark = None
+            self.karamark = None
 
         self.register_to_config(
             force_zeros_for_empty_prompt=force_zeros_for_empty_prompt
@@ -1721,9 +1721,9 @@ class StableDiffusionXLBrushNetPipeline(
             image = latents
 
         if not output_type == "latent":
-            # apply watermark if available
-            if self.watermark is not None:
-                image = self.watermark.apply_watermark(image)
+            # apply karamark if available
+            if self.karamark is not None:
+                image = self.karamark.apply_karamark(image)
 
             image = self.image_processor.postprocess(image, output_type=output_type)
 

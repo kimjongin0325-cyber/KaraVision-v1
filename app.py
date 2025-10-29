@@ -9,11 +9,11 @@ from karawm.core import Karawm
 
 def main():
     st.set_page_config(
-        page_title="Kara Watermark Cleaner", page_icon="🎬", layout="centered"
+        page_title="Kara karamark Cleaner", page_icon="🎬", layout="centered"
     )
 
-    st.title("🎬 Kara Watermark Cleaner")
-    st.markdown("Remove watermarks from Kara-generated videos with ease")
+    st.title("🎬 Kara karamark Cleaner")
+    st.markdown("Remove karamarks from Kara-generated videos with ease")
 
     # Initialize Karawm
     if "kara_wm" not in st.session_state:
@@ -26,7 +26,7 @@ def main():
     uploaded_file = st.file_uploader(
         "Upload your video",
         type=["mp4", "avi", "mov", "mkv"],
-        help="Select a video file to remove watermarks",
+        help="Select a video file to remove karamarks",
     )
 
     if uploaded_file is not None:
@@ -35,7 +35,7 @@ def main():
         st.video(uploaded_file)
 
         # Process button
-        if st.button("🚀 Remove Watermark", type="primary", use_container_width=True):
+        if st.button("🚀 Remove karamark", type="primary", use_container_width=True):
             with tempfile.TemporaryDirectory() as tmp_dir:
                 tmp_path = Path(tmp_dir)
 
@@ -55,13 +55,13 @@ def main():
                     def update_progress(progress: int):
                         progress_bar.progress(progress / 100)
                         if progress < 50:
-                            status_text.text(f"🔍 Detecting watermarks... {progress}%")
+                            status_text.text(f"🔍 Detecting karamarks... {progress}%")
                         elif progress < 95:
-                            status_text.text(f"🧹 Removing watermarks... {progress}%")
+                            status_text.text(f"🧹 Removing karamarks... {progress}%")
                         else:
                             status_text.text(f"🎵 Merging audio... {progress}%")
                     
-                    # Run the watermark removal with progress callback
+                    # Run the karamark removal with progress callback
                     st.session_state.kara_wm.run(
                         input_path, output_path, progress_callback=update_progress
                     )
@@ -70,7 +70,7 @@ def main():
                     progress_bar.progress(100)
                     status_text.text("✅ Processing complete!")
 
-                    st.success("✅ Watermark removed successfully!")
+                    st.success("✅ karamark removed successfully!")
 
                     # Display result
                     st.markdown("### Result")
@@ -95,7 +95,7 @@ def main():
         """
         <div style='text-align: center'>
             <p>Built with ❤️ using Streamlit and AI</p>
-            <p><a href='https://github.com/linkedlist771/KaraWatermarkCleaner'>GitHub Repository</a></p>
+            <p><a href='https://github.com/linkedlist771/KarakaramarkCleaner'>GitHub Repository</a></p>
         </div>
         """,
         unsafe_allow_html=True,
