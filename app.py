@@ -9,16 +9,16 @@ from karawm.core import Karawm
 
 def main():
     st.set_page_config(
-        page_title="Sora Watermark Cleaner", page_icon="🎬", layout="centered"
+        page_title="Kara Watermark Cleaner", page_icon="🎬", layout="centered"
     )
 
-    st.title("🎬 Sora Watermark Cleaner")
-    st.markdown("Remove watermarks from Sora-generated videos with ease")
+    st.title("🎬 Kara Watermark Cleaner")
+    st.markdown("Remove watermarks from Kara-generated videos with ease")
 
     # Initialize Karawm
-    if "sora_wm" not in st.session_state:
+    if "kara_wm" not in st.session_state:
         with st.spinner("Loading AI models..."):
-            st.session_state.sora_wm = Karawm()
+            st.session_state.kara_wm = Karawm()
 
     st.markdown("---")
 
@@ -62,7 +62,7 @@ def main():
                             status_text.text(f"🎵 Merging audio... {progress}%")
                     
                     # Run the watermark removal with progress callback
-                    st.session_state.sora_wm.run(
+                    st.session_state.kara_wm.run(
                         input_path, output_path, progress_callback=update_progress
                     )
                     
@@ -95,7 +95,7 @@ def main():
         """
         <div style='text-align: center'>
             <p>Built with ❤️ using Streamlit and AI</p>
-            <p><a href='https://github.com/linkedlist771/SoraWatermarkCleaner'>GitHub Repository</a></p>
+            <p><a href='https://github.com/linkedlist771/KaraWatermarkCleaner'>GitHub Repository</a></p>
         </div>
         """,
         unsafe_allow_html=True,

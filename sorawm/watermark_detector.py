@@ -8,10 +8,10 @@ from karawm.configs import WATER_MARK_DETECT_YOLO_WEIGHTS
 from karawm.utils.download_utils import download_detector_weights
 from karawm.utils.video_utils import VideoLoader
 
-# based on the sora tempalte to detect the whole, and then got the icon part area.
+# based on the kara tempalte to detect the whole, and then got the icon part area.
 
 
-class SoraWaterMarkDetector:
+class KaraWaterMarkDetector:
     def __init__(self):
         download_detector_weights()
         logger.debug(f"Begin to load yolo water mark detet model.")
@@ -61,12 +61,12 @@ if __name__ == "__main__":
     # video_path = Path("resources/puppies.mp4") # 19700121_1645_68e0a027836c8191a50bea3717ea7485.mp4
     video_path = Path("resources/19700121_1645_68e0a027836c8191a50bea3717ea7485.mp4")
     save_video = True
-    out_path = Path("outputs/sora_watermark_yolo_detected.mp4")
-    window = "Sora Watermark YOLO Detection"
+    out_path = Path("outputs/kara_watermark_yolo_detected.mp4")
+    window = "Kara Watermark YOLO Detection"
     # =======================
 
     # 初始化检测器
-    detector = SoraWaterMarkDetector()
+    detector = KaraWaterMarkDetector()
 
     # 初始化视频加载器
     video_loader = VideoLoader(video_path)

@@ -1,8 +1,8 @@
-# SoraWatermarkCleaner
+# KaraWatermarkCleaner
 
 [English](README.md) | 中文
 
-这个项目提供了一种优雅的方式来移除 Sora2 生成视频中的 Sora 水印。
+这个项目提供了一种优雅的方式来移除 Kara2 生成视频中的 Kara 水印。
 
 
 - 移除水印后
@@ -18,9 +18,9 @@ https://github.com/user-attachments/assets/3c850ff1-b8e3-41af-a46f-2c734406e77d
 
 ## 1. 方法
 
-SoraWatermarkCleaner（后面我们简称为 `Karawm`）由两部分组成：
+KaraWatermarkCleaner（后面我们简称为 `Karawm`）由两部分组成：
 
-- SoraWaterMarkDetector：我们训练了一个 yolov11s 版本来检测 Sora 水印。（感谢 YOLO！）
+- KaraWaterMarkDetector：我们训练了一个 yolov11s 版本来检测 Kara 水印。（感谢 YOLO！）
 
 - WaterMarkCleaner：我们参考了 IOPaint 的实现，使用 LAMA 模型进行水印移除。
 
@@ -47,7 +47,7 @@ uv sync
 
 2. 下载预训练模型：
 
-训练好的 YOLO 权重将存储在 `resources` 目录中，文件名为 `best.pt`。它将从 https://github.com/linkedlist771/SoraWatermarkCleaner/releases/download/V0.0.1/best.pt 自动下载。`Lama` 模型从 https://github.com/Sanster/models/releases/download/add_big_lama/big-lama.pt 下载，并将存储在 torch 缓存目录中。两者都是自动下载的，如果失败，请检查你的网络状态。
+训练好的 YOLO 权重将存储在 `resources` 目录中，文件名为 `best.pt`。它将从 https://github.com/linkedlist771/KaraWatermarkCleaner/releases/download/V0.0.1/best.pt 自动下载。`Lama` 模型从 https://github.com/Sanster/models/releases/download/add_big_lama/big-lama.pt 下载，并将存储在 torch 缓存目录中。两者都是自动下载的，如果失败，请检查你的网络状态。
 
 ## 3. 演示
 
@@ -63,9 +63,9 @@ if __name__ == "__main__":
     input_video_path = Path(
         "resources/dog_vs_sam.mp4"
     )
-    output_video_path = Path("outputs/sora_watermark_removed.mp4")
-    sora_wm = Karawm()
-    sora_wm.run(input_video_path, output_video_path)
+    output_video_path = Path("outputs/kara_watermark_removed.mp4")
+    kara_wm = Karawm()
+    kara_wm.run(input_video_path, output_video_path)
 
 ```
 
@@ -105,7 +105,7 @@ Web 服务器将在端口 `5344` 启动，你可以查看 FastAPI [文档](http:
 
 ## 5. API
 
-打包为 Cog 并[发布到 Replicate](https://replicate.com/uglyrobot/sora2-watermark-remover)，便于基于 API 的简单使用。
+打包为 Cog 并[发布到 Replicate](https://replicate.com/uglyrobot/kara2-watermark-remover)，便于基于 API 的简单使用。
 
 ## 6. 许可证
 
@@ -118,11 +118,11 @@ Apache License
 如果你使用了这个项目，请引用：
 
 ```bibtex
-@misc{sorawatermarkcleaner2025,
+@misc{karawatermarkcleaner2025,
   author = {linkedlist771},
-  title = {SoraWatermarkCleaner},
+  title = {KaraWatermarkCleaner},
   year = {2025},
-  url = {https://github.com/linkedlist771/SoraWatermarkCleaner}
+  url = {https://github.com/linkedlist771/KaraWatermarkCleaner}
 }
 ```
 

@@ -8,12 +8,12 @@ from tqdm import tqdm
 
 from karawm.utils.video_utils import VideoLoader
 from karawm.watermark_cleaner import WaterMarkCleaner
-from karawm.watermark_detector import SoraWaterMarkDetector
+from karawm.watermark_detector import KaraWaterMarkDetector
 
 
 class Karawm:
     def __init__(self):
-        self.detector = SoraWaterMarkDetector()
+        self.detector = KaraWaterMarkDetector()
         self.cleaner = WaterMarkCleaner()
 
     def run(
@@ -137,6 +137,6 @@ if __name__ == "__main__":
     input_video_path = Path(
         "resources/19700121_1645_68e0a027836c8191a50bea3717ea7485.mp4"
     )
-    output_video_path = Path("outputs/sora_watermark_removed.mp4")
-    sora_wm = Karawm()
-    sora_wm.run(input_video_path, output_video_path)
+    output_video_path = Path("outputs/kara_watermark_removed.mp4")
+    kara_wm = Karawm()
+    kara_wm.run(input_video_path, output_video_path)

@@ -47,7 +47,7 @@ if __name__ == "__main__":
     video_path = Path("resources/puppies.mp4")
     save_video = True
     out_path = Path("outputs/dog_vs_sam_detected.mp4")
-    window = "Sora watermark (threshold+morph+shape + tracking)"
+    window = "Kara watermark (threshold+morph+shape + tracking)"
 
     # 追踪/回退策略参数
     PREV_ROI_EXPAND = 2.2  # 上一框宽高的膨胀倍数（>1）
@@ -55,7 +55,7 @@ if __name__ == "__main__":
     AREA2 = (600, 4000)  # 回退阶段面积范围
     # =======================
 
-    cleaner = SoraWaterMarkCleaner(video_path, video_path)
+    cleaner = KaraWaterMarkCleaner(video_path, video_path)
 
     # 预取一帧确定尺寸/FPS
     first_frame = None
