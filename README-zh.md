@@ -56,7 +56,7 @@ uv sync
 ```python
 
 from pathlib import Path
-from sorawm.core import SoraWM
+from karawm.core import SoraWM
 
 
 if __name__ == "__main__":

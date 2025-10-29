@@ -9,7 +9,7 @@ from pathlib import Path
 
 from safetensors.torch import load_file
 
-from sorawm.iopaint.model.utils import set_seed
+from karawm.iopaint.model.utils import set_seed
 
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 import re
@@ -20,10 +20,10 @@ import numpy as np
 import torch
 from PIL import ImageFont
 
-from sorawm.iopaint.model.anytext.cldm.ddim_hacked import DDIMSampler
-from sorawm.iopaint.model.anytext.cldm.model import (create_model,
+from karawm.iopaint.model.anytext.cldm.ddim_hacked import DDIMSampler
+from karawm.iopaint.model.anytext.cldm.model import (create_model,
                                                      load_state_dict)
-from sorawm.iopaint.model.anytext.utils import (check_channels, draw_glyph,
+from karawm.iopaint.model.anytext.utils import (check_channels, draw_glyph,
                                                 draw_glyph2)
 
 BBOX_MAX_NUM = 8

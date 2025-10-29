@@ -4,7 +4,7 @@ import requests
 from loguru import logger
 from tqdm import tqdm
 
-from sorawm.configs import WATER_MARK_DETECT_YOLO_WEIGHTS
+from karawm.configs import WATER_MARK_DETECT_YOLO_WEIGHTS
 
 DETECTOR_URL = "https://github.com/linkedlist771/SoraWatermarkCleaner/releases/download/V0.0.1/best.pt"
 

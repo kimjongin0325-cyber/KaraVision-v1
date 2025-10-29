@@ -3,7 +3,7 @@ from datetime import datetime
 from sqlalchemy import DateTime, Integer, String
 from sqlalchemy.orm import Mapped, mapped_column
 
-from sorawm.server.db import Base
+from karawm.server.db import Base
 
 
 class Task(Base):

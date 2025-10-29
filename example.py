@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from sorawm.core import SoraWM
+from karawm.core import SoraWM
 
 if __name__ == "__main__":
     input_video_path = Path("resources/dog_vs_sam.mp4")

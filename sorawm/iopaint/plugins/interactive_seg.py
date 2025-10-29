@@ -5,15 +5,15 @@ import numpy as np
 import torch
 from loguru import logger
 
-from sorawm.iopaint.helper import download_model
-from sorawm.iopaint.plugins.base_plugin import BasePlugin
-from sorawm.iopaint.plugins.segment_anything import (SamPredictor,
+from karawm.iopaint.helper import download_model
+from karawm.iopaint.plugins.base_plugin import BasePlugin
+from karawm.iopaint.plugins.segment_anything import (SamPredictor,
                                                      sam_model_registry)
-from sorawm.iopaint.plugins.segment_anything2.build_sam import build_sam2
-from sorawm.iopaint.plugins.segment_anything2.sam2_image_predictor import \
+from karawm.iopaint.plugins.segment_anything2.build_sam import build_sam2
+from karawm.iopaint.plugins.segment_anything2.sam2_image_predictor import \
     SAM2ImagePredictor
-from sorawm.iopaint.plugins.segment_anything.predictor_hq import SamHQPredictor
-from sorawm.iopaint.schema import RunPluginRequest
+from karawm.iopaint.plugins.segment_anything.predictor_hq import SamHQPredictor
+from karawm.iopaint.schema import RunPluginRequest
 
 # 从小到大
 SEGMENT_ANYTHING_MODELS = {

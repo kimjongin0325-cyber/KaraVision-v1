@@ -7,8 +7,8 @@ import torch
 from loguru import logger
 from transformers import CLIPTextModel, CLIPTokenizer
 
-from sorawm.iopaint.model.original_sd_configs import get_config_files
-from sorawm.iopaint.schema import InpaintRequest, ModelType
+from karawm.iopaint.model.original_sd_configs import get_config_files
+from karawm.iopaint.schema import InpaintRequest, ModelType
 
 from ..base import DiffusionInpaintModel
 from ..helper.cpu_text_encoder import CPUTextEncoderWrapper

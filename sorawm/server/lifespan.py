@@ -4,8 +4,8 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from loguru import logger
 
-from sorawm.server.db import init_db
-from sorawm.server.worker import worker
+from karawm.server.db import init_db
+from karawm.server.worker import worker
 
 
 @asynccontextmanager

@@ -9,18 +9,18 @@ import torch.nn as nn
 from easydict import EasyDict as edict
 from einops import rearrange, repeat
 
-from sorawm.iopaint.model.anytext.ldm.models.diffusion.ddim import DDIMSampler
-from sorawm.iopaint.model.anytext.ldm.models.diffusion.ddpm import \
+from karawm.iopaint.model.anytext.ldm.models.diffusion.ddim import DDIMSampler
+from karawm.iopaint.model.anytext.ldm.models.diffusion.ddpm import \
     LatentDiffusion
-from sorawm.iopaint.model.anytext.ldm.modules.attention import \
+from karawm.iopaint.model.anytext.ldm.modules.attention import \
     SpatialTransformer
-from sorawm.iopaint.model.anytext.ldm.modules.diffusionmodules.openaimodel import (
+from karawm.iopaint.model.anytext.ldm.modules.diffusionmodules.openaimodel import (
     AttentionBlock, Downsample, ResBlock, TimestepEmbedSequential, UNetModel)
-from sorawm.iopaint.model.anytext.ldm.modules.diffusionmodules.util import (
+from karawm.iopaint.model.anytext.ldm.modules.diffusionmodules.util import (
     conv_nd, linear, timestep_embedding, zero_module)
-from sorawm.iopaint.model.anytext.ldm.modules.distributions.distributions import \
+from karawm.iopaint.model.anytext.ldm.modules.distributions.distributions import \
     DiagonalGaussianDistribution
-from sorawm.iopaint.model.anytext.ldm.util import (exists,
+from karawm.iopaint.model.anytext.ldm.util import (exists,
                                                    instantiate_from_config,
                                                    log_txt_as_img)
 

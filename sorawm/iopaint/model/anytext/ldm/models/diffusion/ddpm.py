@@ -16,15 +16,15 @@ from torch.optim.lr_scheduler import LambdaLR
 from torchvision.utils import make_grid
 from tqdm import tqdm
 
-from sorawm.iopaint.model.anytext.ldm.models.autoencoder import (
+from karawm.iopaint.model.anytext.ldm.models.autoencoder import (
     AutoencoderKL, IdentityFirstStage)
-from sorawm.iopaint.model.anytext.ldm.models.diffusion.ddim import DDIMSampler
-from sorawm.iopaint.model.anytext.ldm.modules.diffusionmodules.util import (
+from karawm.iopaint.model.anytext.ldm.models.diffusion.ddim import DDIMSampler
+from karawm.iopaint.model.anytext.ldm.modules.diffusionmodules.util import (
     extract_into_tensor, make_beta_schedule, noise_like)
-from sorawm.iopaint.model.anytext.ldm.modules.distributions.distributions import (
+from karawm.iopaint.model.anytext.ldm.modules.distributions.distributions import (
     DiagonalGaussianDistribution, normal_kl)
-from sorawm.iopaint.model.anytext.ldm.modules.ema import LitEma
-from sorawm.iopaint.model.anytext.ldm.util import (count_params, default,
+from karawm.iopaint.model.anytext.ldm.modules.ema import LitEma
+from karawm.iopaint.model.anytext.ldm.util import (count_params, default,
                                                    exists,
                                                    instantiate_from_config,
                                                    isimage, ismap,

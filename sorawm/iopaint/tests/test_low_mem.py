@@ -2,7 +2,7 @@ import os
 
 from loguru import logger
 
-from sorawm.iopaint.tests.utils import (assert_equal, check_device,
+from karawm.iopaint.tests.utils import (assert_equal, check_device,
                                         current_dir, get_config)
 
 os.environ["PYTORCH_ENABLE_MPS_FALLBACK"] = "1"
@@ -10,8 +10,8 @@ os.environ["PYTORCH_ENABLE_MPS_FALLBACK"] = "1"
 import pytest
 import torch
 
-from sorawm.iopaint.model_manager import ModelManager
-from sorawm.iopaint.schema import HDStrategy, SDSampler
+from karawm.iopaint.model_manager import ModelManager
+from karawm.iopaint.schema import HDStrategy, SDSampler
 
 
 @pytest.mark.parametrize("device", ["cuda", "mps"])

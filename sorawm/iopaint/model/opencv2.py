@@ -1,6 +1,6 @@
 import cv2
 
-from sorawm.iopaint.schema import InpaintRequest
+from karawm.iopaint.schema import InpaintRequest
 
 from .base import InpaintModel
 

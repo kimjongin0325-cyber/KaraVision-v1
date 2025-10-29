@@ -8,7 +8,7 @@ from pathlib import Path
 mimetypes.add_type("application/javascript", ".js")
 mimetypes.add_type("text/css", ".css")
 
-from sorawm.iopaint.schema import (ApiConfig, Device, InteractiveSegModel,
+from karawm.iopaint.schema import (ApiConfig, Device, InteractiveSegModel,
                                    RealESRGANModel, RemoveBGModel)
 
 os.environ["GRADIO_ANALYTICS_ENABLED"] = "False"
@@ -19,8 +19,8 @@ from json import JSONDecodeError
 import gradio as gr
 from loguru import logger
 
-from sorawm.iopaint.const import *
-from sorawm.iopaint.download import scan_models
+from karawm.iopaint.const import *
+from karawm.iopaint.download import scan_models
 
 _config_file: Path = None
 

@@ -11,10 +11,10 @@ from rich.progress import (BarColumn, MofNCompleteColumn, Progress,
                            SpinnerColumn, TaskProgressColumn, TextColumn,
                            TimeElapsedColumn)
 
-from sorawm.iopaint.helper import pil_to_bytes
-from sorawm.iopaint.model.utils import torch_gc
-from sorawm.iopaint.model_manager import ModelManager
-from sorawm.iopaint.schema import InpaintRequest
+from karawm.iopaint.helper import pil_to_bytes
+from karawm.iopaint.model.utils import torch_gc
+from karawm.iopaint.model_manager import ModelManager
+from karawm.iopaint.schema import InpaintRequest
 
 
 def glob_images(path: Path) -> Dict[str, Path]:

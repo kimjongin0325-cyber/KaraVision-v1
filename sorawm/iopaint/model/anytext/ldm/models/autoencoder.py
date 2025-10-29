@@ -3,12 +3,12 @@ from contextlib import contextmanager
 import torch
 import torch.nn.functional as F
 
-from sorawm.iopaint.model.anytext.ldm.modules.diffusionmodules.model import (
+from karawm.iopaint.model.anytext.ldm.modules.diffusionmodules.model import (
     Decoder, Encoder)
-from sorawm.iopaint.model.anytext.ldm.modules.distributions.distributions import \
+from karawm.iopaint.model.anytext.ldm.modules.distributions.distributions import \
     DiagonalGaussianDistribution
-from sorawm.iopaint.model.anytext.ldm.modules.ema import LitEma
-from sorawm.iopaint.model.anytext.ldm.util import instantiate_from_config
+from karawm.iopaint.model.anytext.ldm.modules.ema import LitEma
+from karawm.iopaint.model.anytext.ldm.util import instantiate_from_config
 
 
 class AutoencoderKL(torch.nn.Module):

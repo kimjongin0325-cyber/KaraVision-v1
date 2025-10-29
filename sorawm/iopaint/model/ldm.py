@@ -4,7 +4,7 @@ import numpy as np
 import torch
 from loguru import logger
 
-from sorawm.iopaint.schema import InpaintRequest, LDMSampler
+from karawm.iopaint.schema import InpaintRequest, LDMSampler
 
 from .base import InpaintModel
 from .ddim_sampler import DDIMSampler
@@ -13,7 +13,7 @@ from .plms_sampler import PLMSSampler
 torch.manual_seed(42)
 import torch.nn as nn
 
-from sorawm.iopaint.helper import (download_model, get_cache_path_by_url,
+from karawm.iopaint.helper import (download_model, get_cache_path_by_url,
                                    load_jit_model, norm_img)
 
 from .utils import make_beta_schedule, timestep_embedding

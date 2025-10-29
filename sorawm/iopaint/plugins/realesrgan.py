@@ -7,9 +7,9 @@ import torch.nn.functional as F
 from loguru import logger
 from torch import nn
 
-from sorawm.iopaint.helper import download_model
-from sorawm.iopaint.plugins.base_plugin import BasePlugin
-from sorawm.iopaint.schema import RealESRGANModel, RunPluginRequest
+from karawm.iopaint.helper import download_model
+from karawm.iopaint.plugins.base_plugin import BasePlugin
+from karawm.iopaint.schema import RealESRGANModel, RunPluginRequest
 
 
 class RealESRGANer:

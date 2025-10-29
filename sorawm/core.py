@@ -6,9 +6,9 @@ import numpy as np
 from loguru import logger
 from tqdm import tqdm
 
-from sorawm.utils.video_utils import VideoLoader
-from sorawm.watermark_cleaner import WaterMarkCleaner
-from sorawm.watermark_detector import SoraWaterMarkDetector
+from karawm.utils.video_utils import VideoLoader
+from karawm.watermark_cleaner import WaterMarkCleaner
+from karawm.watermark_detector import SoraWaterMarkDetector
 
 
 class SoraWM:

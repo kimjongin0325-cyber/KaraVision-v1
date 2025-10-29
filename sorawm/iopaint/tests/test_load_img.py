@@ -1,5 +1,5 @@
-from sorawm.iopaint.helper import load_img
-from sorawm.iopaint.tests.utils import current_dir
+from karawm.iopaint.helper import load_img
+from karawm.iopaint.tests.utils import current_dir
 
 png_img_p = current_dir / "image.png"
 jpg_img_p = current_dir / "bunny.jpeg"

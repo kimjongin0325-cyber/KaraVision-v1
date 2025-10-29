@@ -2,7 +2,7 @@ import os
 
 from loguru import logger
 
-from sorawm.iopaint.tests.utils import assert_equal, check_device, get_config
+from karawm.iopaint.tests.utils import assert_equal, check_device, get_config
 
 os.environ["PYTORCH_ENABLE_MPS_FALLBACK"] = "1"
 from pathlib import Path
@@ -10,8 +10,8 @@ from pathlib import Path
 import pytest
 import torch
 
-from sorawm.iopaint.model_manager import ModelManager
-from sorawm.iopaint.schema import HDStrategy, SDSampler
+from karawm.iopaint.model_manager import ModelManager
+from karawm.iopaint.schema import HDStrategy, SDSampler
 
 current_dir = Path(__file__).parent.absolute().resolve()
 save_dir = current_dir / "result"

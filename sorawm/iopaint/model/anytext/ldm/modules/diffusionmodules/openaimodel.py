@@ -6,12 +6,12 @@ import torch as th
 import torch.nn as nn
 import torch.nn.functional as F
 
-from sorawm.iopaint.model.anytext.ldm.modules.attention import \
+from karawm.iopaint.model.anytext.ldm.modules.attention import \
     SpatialTransformer
-from sorawm.iopaint.model.anytext.ldm.modules.diffusionmodules.util import (
+from karawm.iopaint.model.anytext.ldm.modules.diffusionmodules.util import (
     avg_pool_nd, checkpoint, conv_nd, linear, normalization,
     timestep_embedding, zero_module)
-from sorawm.iopaint.model.anytext.ldm.util import exists
+from karawm.iopaint.model.anytext.ldm.util import exists
 
 
 # dummy replace

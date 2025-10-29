@@ -5,8 +5,8 @@ import aiofiles
 from fastapi import APIRouter, BackgroundTasks, File, HTTPException, UploadFile
 from fastapi.responses import FileResponse
 
-from sorawm.server.schemas import WMRemoveResults
-from sorawm.server.worker import worker
+from karawm.server.schemas import WMRemoveResults
+from karawm.server.worker import worker
 
 router = APIRouter()
 

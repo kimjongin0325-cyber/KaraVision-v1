@@ -3,7 +3,7 @@ import PIL.Image
 import torch
 from loguru import logger
 
-from sorawm.iopaint.schema import InpaintRequest, ModelType
+from karawm.iopaint.schema import InpaintRequest, ModelType
 
 from .base import DiffusionInpaintModel
 from .helper.cpu_text_encoder import CPUTextEncoderWrapper

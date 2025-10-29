@@ -1,11 +1,11 @@
 import torch
 from huggingface_hub import hf_hub_download
 
-from sorawm.iopaint.const import ANYTEXT_NAME
-from sorawm.iopaint.model.anytext.anytext_pipeline import AnyTextPipeline
-from sorawm.iopaint.model.base import DiffusionInpaintModel
-from sorawm.iopaint.model.utils import get_torch_dtype, is_local_files_only
-from sorawm.iopaint.schema import InpaintRequest
+from karawm.iopaint.const import ANYTEXT_NAME
+from karawm.iopaint.model.anytext.anytext_pipeline import AnyTextPipeline
+from karawm.iopaint.model.base import DiffusionInpaintModel
+from karawm.iopaint.model.utils import get_torch_dtype, is_local_files_only
+from karawm.iopaint.schema import InpaintRequest
 
 
 class AnyText(DiffusionInpaintModel):

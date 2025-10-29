@@ -1,7 +1,7 @@
 import numpy as np
 from loguru import logger
 
-from sorawm.iopaint.schema import RunPluginRequest
+from karawm.iopaint.schema import RunPluginRequest
 
 
 class BasePlugin:

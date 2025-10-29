@@ -5,11 +5,11 @@ import numpy as np
 import torch
 from loguru import logger
 
-from sorawm.configs import DEFAULT_WATERMARK_REMOVE_MODEL
-from sorawm.iopaint.const import DEFAULT_MODEL_DIR
-from sorawm.iopaint.download import cli_download_model, scan_models
-from sorawm.iopaint.model_manager import ModelManager
-from sorawm.iopaint.schema import InpaintRequest
+from karawm.configs import DEFAULT_WATERMARK_REMOVE_MODEL
+from karawm.iopaint.const import DEFAULT_MODEL_DIR
+from karawm.iopaint.download import cli_download_model, scan_models
+from karawm.iopaint.model_manager import ModelManager
+from karawm.iopaint.schema import InpaintRequest
 
 # This codebase is from https://github.com/Sanster/IOPaint#, thanks for their amazing work!
 

@@ -3,7 +3,7 @@ import os
 import torch
 from omegaconf import OmegaConf
 
-from sorawm.iopaint.model.anytext.ldm.util import instantiate_from_config
+from karawm.iopaint.model.anytext.ldm.util import instantiate_from_config
 
 
 def get_state_dict(d):

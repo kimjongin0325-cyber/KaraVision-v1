@@ -7,7 +7,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from sorawm.iopaint.model.anytext.ldm.modules.diffusionmodules.util import (
+from karawm.iopaint.model.anytext.ldm.modules.diffusionmodules.util import (
     conv_nd, linear)
 
 

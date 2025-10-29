@@ -4,7 +4,7 @@ import torch
 from diffusers import ControlNetModel
 from loguru import logger
 
-from sorawm.iopaint.schema import InpaintRequest, ModelType
+from karawm.iopaint.schema import InpaintRequest, ModelType
 
 from .base import DiffusionInpaintModel
 from .helper.controlnet_preprocess import (make_canny_control_image,

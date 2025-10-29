@@ -8,10 +8,10 @@ import torch.fft as fft
 import torch.nn.functional as F
 from torch import conv2d, nn
 
-from sorawm.iopaint.helper import (boxes_from_mask, download_model,
+from karawm.iopaint.helper import (boxes_from_mask, download_model,
                                    get_cache_path_by_url, load_model, norm_img,
                                    resize_max_size)
-from sorawm.iopaint.schema import InpaintRequest
+from karawm.iopaint.schema import InpaintRequest
 
 from .base import InpaintModel
 from .utils import (Conv2dLayer, FullyConnectedLayer, MinibatchStdLayer,

@@ -1,9 +1,9 @@
 import pytest
 import torch
 
-from sorawm.iopaint.model_manager import ModelManager
-from sorawm.iopaint.schema import HDStrategy, SDSampler
-from sorawm.iopaint.tests.utils import (assert_equal, check_device,
+from karawm.iopaint.model_manager import ModelManager
+from karawm.iopaint.schema import HDStrategy, SDSampler
+from karawm.iopaint.tests.utils import (assert_equal, check_device,
                                         current_dir, get_config)
 
 

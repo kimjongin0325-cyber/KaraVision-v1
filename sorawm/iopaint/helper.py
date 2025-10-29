@@ -14,7 +14,7 @@ from loguru import logger
 from PIL import Image, ImageOps, PngImagePlugin
 from torch.hub import download_url_to_file, get_dir
 
-from sorawm.iopaint.const import MPS_UNSUPPORT_MODELS
+from karawm.iopaint.const import MPS_UNSUPPORT_MODELS
 
 
 def md5sum(filename):
@@ -60,12 +60,12 @@ def download_model(url, model_md5: str = None):
                 try:
                     os.remove(cached_file)
                     logger.error(
-                        f"Model md5: {_md5}, expected md5: {model_md5}, wrong model deleted. Please restart sorawm.iopaint."
+                        f"Model md5: {_md5}, expected md5: {model_md5}, wrong model deleted. Please restart karawm.iopaint."
                         f"If you still have errors, please try download model manually first https://lama-cleaner-docs.vercel.app/install/download_model_manually.\n"
                     )
                 except:
                     logger.error(
-                        f"Model md5: {_md5}, expected md5: {model_md5}, please delete {cached_file} and restart sorawm.iopaint."
+                        f"Model md5: {_md5}, expected md5: {model_md5}, please delete {cached_file} and restart karawm.iopaint."
                     )
                 exit(-1)
 
@@ -84,12 +84,12 @@ def handle_error(model_path, model_md5, e):
         try:
             os.remove(model_path)
             logger.error(
-                f"Model md5: {_md5}, expected md5: {model_md5}, wrong model deleted. Please restart sorawm.iopaint."
+                f"Model md5: {_md5}, expected md5: {model_md5}, wrong model deleted. Please restart karawm.iopaint."
                 f"If you still have errors, please try download model manually first https://lama-cleaner-docs.vercel.app/install/download_model_manually.\n"
             )
         except:
             logger.error(
-                f"Model md5: {_md5}, expected md5: {model_md5}, please delete {model_path} and restart sorawm.iopaint."
+                f"Model md5: {_md5}, expected md5: {model_md5}, please delete {model_path} and restart karawm.iopaint."
             )
     else:
         logger.error(

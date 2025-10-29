@@ -16,7 +16,7 @@ import torch
 import torch.nn as nn
 from einops import repeat
 
-from sorawm.iopaint.model.anytext.ldm.util import instantiate_from_config
+from karawm.iopaint.model.anytext.ldm.util import instantiate_from_config
 
 
 def make_beta_schedule(

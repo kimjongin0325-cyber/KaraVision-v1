@@ -8,7 +8,7 @@ from functools import partial
 
 import torch
 
-from sorawm.iopaint.plugins.segment_anything.modeling.tiny_vit_sam import \
+from karawm.iopaint.plugins.segment_anything.modeling.tiny_vit_sam import \
     TinyViT
 
 from .modeling import (ImageEncoderViT, MaskDecoder, PromptEncoder, Sam,

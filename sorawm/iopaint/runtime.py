@@ -9,7 +9,7 @@ import packaging.version
 from loguru import logger
 from rich import print
 
-from sorawm.iopaint.schema import Device
+from karawm.iopaint.schema import Device
 
 _PY_VERSION: str = sys.version.split()[0].rstrip("+")
 

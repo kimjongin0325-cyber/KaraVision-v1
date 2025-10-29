@@ -1,6 +1,6 @@
 def test_load_model():
-    from sorawm.iopaint.model_manager import ModelManager
-    from sorawm.iopaint.plugins import InteractiveSeg
+    from karawm.iopaint.model_manager import ModelManager
+    from karawm.iopaint.plugins import InteractiveSeg
 
     interactive_seg_model = InteractiveSeg("vit_l", "cpu")
 

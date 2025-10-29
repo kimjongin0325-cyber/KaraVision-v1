@@ -7,11 +7,11 @@ from uuid import uuid4
 from loguru import logger
 from sqlalchemy import select
 
-from sorawm.configs import WORKING_DIR
-from sorawm.core import SoraWM
-from sorawm.server.db import get_session
-from sorawm.server.models import Task
-from sorawm.server.schemas import Status, WMRemoveResults
+from karawm.configs import WORKING_DIR
+from karawm.core import SoraWM
+from karawm.server.db import get_session
+from karawm.server.models import Task
+from karawm.server.schemas import Status, WMRemoveResults
 
 
 class WMRemoveTaskWorker:

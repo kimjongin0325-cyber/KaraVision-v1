@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
-from sorawm.server.lifespan import lifespan
-from sorawm.server.router import router
+from karawm.server.lifespan import lifespan
+from karawm.server.router import router
 
 
 def init_app():

@@ -5,9 +5,9 @@ import torch.nn as nn
 import torch.nn.functional as F
 from PIL import Image
 
-from sorawm.iopaint.helper import load_model
-from sorawm.iopaint.plugins.base_plugin import BasePlugin
-from sorawm.iopaint.schema import RunPluginRequest
+from karawm.iopaint.helper import load_model
+from karawm.iopaint.plugins.base_plugin import BasePlugin
+from karawm.iopaint.schema import RunPluginRequest
 
 
 class REBNCONV(nn.Module):

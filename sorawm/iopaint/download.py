@@ -7,18 +7,18 @@ from typing import List, Optional
 
 from loguru import logger
 
-from sorawm.iopaint.const import (ANYTEXT_NAME, DEFAULT_MODEL_DIR,
+from karawm.iopaint.const import (ANYTEXT_NAME, DEFAULT_MODEL_DIR,
                                   DIFFUSERS_SD_CLASS_NAME,
                                   DIFFUSERS_SD_INPAINT_CLASS_NAME,
                                   DIFFUSERS_SDXL_CLASS_NAME,
                                   DIFFUSERS_SDXL_INPAINT_CLASS_NAME)
-from sorawm.iopaint.model.original_sd_configs import get_config_files
-from sorawm.iopaint.schema import ModelInfo, ModelType
+from karawm.iopaint.model.original_sd_configs import get_config_files
+from karawm.iopaint.schema import ModelInfo, ModelType
 
 
 def cli_download_model(model: str):
-    from sorawm.iopaint.model import models
-    from sorawm.iopaint.model.utils import handle_from_pretrained_exceptions
+    from karawm.iopaint.model import models
+    from karawm.iopaint.model.utils import handle_from_pretrained_exceptions
 
     if model in models and models[model].is_erase_model:
         logger.info(f"Downloading {model}...")
@@ -178,7 +178,7 @@ def scan_single_file_diffusion_models(cache_dir) -> List[ModelInfo]:
 
 def scan_inpaint_models(model_dir: Path) -> List[ModelInfo]:
     res = []
-    from sorawm.iopaint.model import models
+    from karawm.iopaint.model import models
 
     # logger.info(f"Scanning inpaint models in {model_dir}")
 

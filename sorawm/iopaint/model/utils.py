@@ -18,7 +18,7 @@ from diffusers import (DDIMScheduler, DPMSolverMultistepScheduler,
 from loguru import logger
 from torch import conv2d, conv_transpose2d
 
-from sorawm.iopaint.schema import SDSampler
+from karawm.iopaint.schema import SDSampler
 
 
 def make_beta_schedule(

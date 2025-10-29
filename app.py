@@ -4,7 +4,7 @@ from pathlib import Path
 
 import streamlit as st
 
-from sorawm.core import SoraWM
+from karawm.core import SoraWM
 
 
 def main():
