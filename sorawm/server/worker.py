@@ -8,7 +8,7 @@ from loguru import logger
 from sqlalchemy import select
 
 from karawm.configs import WORKING_DIR
-from karawm.core import SoraWM
+from karawm.core import Karawm
 from karawm.server.db import get_session
 from karawm.server.models import Task
 from karawm.server.schemas import Status, WMRemoveResults
@@ -23,9 +23,9 @@ class WMRemoveTaskWorker:
         self.upload_dir.mkdir(exist_ok=True, parents=True)
 
     async def initialize(self):
-        logger.info("Initializing SoraWM models...")
-        self.sora_wm = SoraWM()
-        logger.info("SoraWM models initialized")
+        logger.info("Initializing Karawm models...")
+        self.sora_wm = Karawm()
+        logger.info("Karawm models initialized")
 
     async def create_task(self) -> str:
         task_uuid = str(uuid4())

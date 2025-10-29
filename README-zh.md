@@ -18,7 +18,7 @@ https://github.com/user-attachments/assets/3c850ff1-b8e3-41af-a46f-2c734406e77d
 
 ## 1. 方法
 
-SoraWatermarkCleaner（后面我们简称为 `SoraWm`）由两部分组成：
+SoraWatermarkCleaner（后面我们简称为 `Karawm`）由两部分组成：
 
 - SoraWaterMarkDetector：我们训练了一个 yolov11s 版本来检测 Sora 水印。（感谢 YOLO！）
 
@@ -26,7 +26,7 @@ SoraWatermarkCleaner（后面我们简称为 `SoraWm`）由两部分组成：
 
   （此代码库来自 https://github.com/Sanster/IOPaint#，感谢他们的出色工作！）
 
-我们的 SoraWm 完全由深度学习驱动，在许多生成的视频中都能产生良好的效果。
+我们的 Karawm 完全由深度学习驱动，在许多生成的视频中都能产生良好的效果。
 
 
 
@@ -56,7 +56,7 @@ uv sync
 ```python
 
 from pathlib import Path
-from karawm.core import SoraWM
+from karawm.core import Karawm
 
 
 if __name__ == "__main__":
@@ -64,7 +64,7 @@ if __name__ == "__main__":
         "resources/dog_vs_sam.mp4"
     )
     output_video_path = Path("outputs/sora_watermark_removed.mp4")
-    sora_wm = SoraWM()
+    sora_wm = Karawm()
     sora_wm.run(input_video_path, output_video_path)
 
 ```

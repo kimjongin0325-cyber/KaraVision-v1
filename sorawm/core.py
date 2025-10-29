@@ -11,7 +11,7 @@ from karawm.watermark_cleaner import WaterMarkCleaner
 from karawm.watermark_detector import SoraWaterMarkDetector
 
 
-class SoraWM:
+class Karawm:
     def __init__(self):
         self.detector = SoraWaterMarkDetector()
         self.cleaner = WaterMarkCleaner()
@@ -138,5 +138,5 @@ if __name__ == "__main__":
         "resources/19700121_1645_68e0a027836c8191a50bea3717ea7485.mp4"
     )
     output_video_path = Path("outputs/sora_watermark_removed.mp4")
-    sora_wm = SoraWM()
+    sora_wm = Karawm()
     sora_wm.run(input_video_path, output_video_path)
