@@ -6,7 +6,7 @@ from tqdm import tqdm
 
 from karawm.configs import kara_MARK_DETECT_YOLO_WEIGHTS
 
-DETECTOR_URL = "https://github.com/linkedlist771/karaomarkCleaner/releases/download/V0.0.1/best.pt"
+DETECTOR_URL = "https://github.com/linkedlist771/karamarkCleaner/releases/download/V0.0.1/best.pt"
 
 
 def download_detector_weights():

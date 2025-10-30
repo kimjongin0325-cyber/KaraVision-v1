@@ -1,4 +1,4 @@
-# karaomarkCleaner
+# karamarkCleaner
 
 [English](README.md) | 中文
 
@@ -18,9 +18,9 @@ https://github.com/user-attachments/assets/3c850ff1-b8e3-41af-a46f-2c734406e77d
 
 ## 1. 方法
 
-karaomarkCleaner（后面我们简称为 `Karawm`）由两部分组成：
+karamarkCleaner（后面我们简称为 `Karawm`）由两部分组成：
 
-- karaoMarkDetector：我们训练了一个 yolov11s 版本来检测 Kara 水印。（感谢 YOLO！）
+- karaMarkDetector：我们训练了一个 yolov11s 版本来检测 Kara 水印。（感谢 YOLO！）
 
 - karaMarkCleaner：我们参考了 IOPaint 的实现，使用 LAMA 模型进行水印移除。
 
@@ -47,7 +47,7 @@ uv sync
 
 2. 下载预训练模型：
 
-训练好的 YOLO 权重将存储在 `resources` 目录中，文件名为 `best.pt`。它将从 https://github.com/linkedlist771/karaomarkCleaner/releases/download/V0.0.1/best.pt 自动下载。`Lama` 模型从 https://github.com/Sanster/models/releases/download/add_big_lama/big-lama.pt 下载，并将存储在 torch 缓存目录中。两者都是自动下载的，如果失败，请检查你的网络状态。
+训练好的 YOLO 权重将存储在 `resources` 目录中，文件名为 `best.pt`。它将从 https://github.com/linkedlist771/karamarkCleaner/releases/download/V0.0.1/best.pt 自动下载。`Lama` 模型从 https://github.com/Sanster/models/releases/download/add_big_lama/big-lama.pt 下载，并将存储在 torch 缓存目录中。两者都是自动下载的，如果失败，请检查你的网络状态。
 
 ## 3. 演示
 
@@ -118,11 +118,11 @@ Apache License
 如果你使用了这个项目，请引用：
 
 ```bibtex
-@misc{karaomarkcleaner2025,
+@misc{karamarkcleaner2025,
   author = {linkedlist771},
-  title = {karaomarkCleaner},
+  title = {karamarkCleaner},
   year = {2025},
-  url = {https://github.com/linkedlist771/karaomarkCleaner}
+  url = {https://github.com/linkedlist771/karamarkCleaner}
 }
 ```
 
